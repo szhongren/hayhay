@@ -4,7 +4,7 @@ $(document).ready(function() {
     });
     $('#connect').click(function() {
         if (!passwordsMatch()) {
-            $('#passWarn').show();
+            $('#passWarning').show();
             return;
         }
         var reg = "http://www.nimitae.sg/hayhay/server/register.php";
