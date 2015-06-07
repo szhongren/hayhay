@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Hayhay Login</title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js'></script>
+    <script src="register.js"></script>
+    <link rel="stylesheet" type="text/css" href="register.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nunito">
+</head>
+<body>
+<!-- Start SignUp -->
+<div class="static" id="login" style="">
+    <div class="heading">
+        <h1>Sign Up</h1>
+    </div><br><br>
+
+    <form id="signup">
+        <p class="caps">VERIFY YOURSELF:</p>
+        <input type="text" name="email" value="edu email"><br><br>
+        <p class="caps">SECURE YOURSELF:</p>
+        <input type="text" name="password" value="password"><br><br>
+        <p class="caps">REPEAT PASSWORD:</p>
+        <input type="text" name="repeatpassword" value="repeat password"><br><br>
+    </form>
+    <button class="button-big" type="submit" form="signup" value="submit" id='connect'>CREATE</button>
+    <div id='passWarning' style="color: red; visibility: hidden"><p>The entered passworbbds do not match.</p></div>
+    <p class="fineprint">Already have an account? <!-- ADD IN LINK-->Sign in<br><br>
+        By clicking the "Sign Up" button above, you are indicating that you agree to our Terms of Use and Privacy Policy.</p>
+</div>
+<!-- End SignUp -->
+</body>
+</html>
