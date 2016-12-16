@@ -34,6 +34,7 @@ function showPosition(position) {
     };
 
     function populate(list) {
+        // populates the page with the list of threads
         obj = JSON.parse(list);
         for (var i = 0; i < obj.threadList.length; i+=1) {
             $("#home").append("<div class='row'> " + obj.threadList[i].threadID + ":\t" +
@@ -51,7 +52,9 @@ function makeMarker(map, curr) {
         titile: curr.title
     });
     var clos = function () { return curr.threadID; }
+    // use a closure so we don't have to store the coordinates of the marker'
     google.maps.event.addListener(marker, 'click', function() { subscribe(clos()); })
+    // for each marker, when clicked we subscribe to a thread
 }
 
 function showError(error) {
@@ -72,6 +75,7 @@ function showError(error) {
 }
 
 var session = {
+    // main code
     connection: null,
     user: "zhongren@hayhay",
     pass: "a",
@@ -144,6 +148,7 @@ $(document).ready(function () {
         var jid = session.partner;
 
         if (ev.which === 13) {
+            // enter key
             ev.preventDefault();
 
             var body = $(this).val();
